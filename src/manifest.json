@@ -1,0 +1,12 @@
+{
+  "name": "Global Apply For Card",
+  "short_name" : "GAFC",
+  "icons": [{
+    "src": "assets/images/amexicon192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "gcm_sender_id": "417535742806"
+}

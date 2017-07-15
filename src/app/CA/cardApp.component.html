@@ -1,0 +1,70 @@
+
+<div class="container-fluid">
+<h1>Card App Page</h1>
+
+<div class="form-group row">
+  <div class="col-md-4">
+    <label for="example-text-input" class="col-2 col-form-label">First Name</label>
+    <div class="col-10">
+      <input [(ngModel)]="firstName" class="form-control" type="text" placeholder="John" id="example-text-input">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="example-text-input" class="col-2 col-form-label">Middle Name</label>
+    <div class="col-10">
+      <input [(ngModel)]="middleName" class="form-control" type="text" placeholder="R" id="example-text-input">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <label for="example-text-input" class="col-2 col-form-label">Last Name</label>
+    <div class="col-10">
+      <input [(ngModel)]="lastName" class="form-control" type="text" placeholder="Doe" id="example-text-input">
+    </div>
+  </div>
+</div>
+
+  <div class="form-group row">
+    <div class="col-md-4">
+    <label class="col-2 col-form-label">Card Type</label>
+      <div class="dropdown">
+        <button ngDefaultControl name="cardType" [(ngModel)]="cType" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{cType}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button *ngFor="let cardType of cardTypes" class="dropdown-item" type="button" (click)="selectCardType(cardType)">{{cardType}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label class="col-2 col-form-label">Liability Type</label>
+      <div class="dropdown">
+        <button ngDefaultControl name="liabilityType" [(ngModel)]="lType" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{lType}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button *ngFor="let liabilityType of liabilityTypes" class="dropdown-item" type="button" (click)="selectLiabilityType(liabilityType)">{{liabilityType}}</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label class="col-2 col-form-label">Approval Type</label>
+      <div class="dropdown">
+        <button ngDefaultControl name="liabilityType" [(ngModel)]="aType" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{aType}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button *ngFor="let approvalType of approvalTypes" class="dropdown-item" type="button" (click)="selectApprovalType(approvalType)">{{approvalType}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-md-4">
+    <button id="submitButton" class="btn btn-primary" (click)="submitApplication()">Submit</button>
+      </div>
+    </div>
+
+
+
+

@@ -1,0 +1,17 @@
+{
+  "name": "serviceworkerdemo",
+  "version": "0.0.1",
+  "description": "Atwork 3.0 Webapp - extra pkg json to deploy to registry",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "cors": "^2.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.aexp.com/aim148037652/atwork3-web.git"
+  }
+}
